@@ -14,6 +14,8 @@ Source: [Bundesamt für Statistik](https://www.bfs.admin.ch/bfs/de/home/statisti
 - Select the canton you're eligible to vote.  
 - Result (whether you should vote or not) is automatically updated.  
 
+![](data/screenshot.png)
+
 *Caution: This app just tells you if you should vote or not, it's on you to decide what to vote!*
 
 ## Acknowledgements
