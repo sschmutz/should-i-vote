@@ -8,7 +8,7 @@ Thank you [Dan Bader](https://dbader.org/) for the always useful [README templat
 ![](screenshot.png)
 
 ## Introduction
-The next vote in Switzerland is up on 25. November 2018. Now the question,
+The next vote in Switzerland is up on 10. Frebruary 2019. Now the question,
 should I go through everything and actually vote?
 This app helps you decide.  
 
