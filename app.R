@@ -46,7 +46,7 @@ ui <- fluidPage(
     fluidRow(
         column(12,
                br(),
-               tags$div(align = "center", h5("Ich wohne im Kanton:"))
+               tags$div(align = "center", h5("Stimmrecht im Kanton:"))
                )
         ),
     
@@ -66,7 +66,7 @@ ui <- fluidPage(
     
     fluidRow(
         column(12,
-               h5(textOutput("result"), align = "center"))
+               h5(em(textOutput("result")), align = "center"))
         ),
     
     fluidRow(
