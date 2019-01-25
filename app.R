@@ -33,7 +33,7 @@ ui <- fluidPage(
     fluidRow(
         column(12, 
                tags$div(align = "right", 
-                        a(href = "https://gist.github.com/mine-cetinkaya-rundel/829cdb7291b09a710efea982ad91f80e", 
+                        a(href = "https://github.com/sschmutz/should-i-vote", 
                           h4(fa("github", fill = "#B9BABD"))
                           )
                         )
