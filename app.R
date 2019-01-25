@@ -54,8 +54,8 @@ ui <- fluidPage(
         column(12,
                tags$div(align = "center", selectInput("selected_canton",
                                                       label = "",
-                                                      choices = gadm36_CHE_1$NAME_1_deutsch,
-                                                      selected = "Bern",
+                                                      choices = c("", gadm36_CHE_1$NAME_1_deutsch),
+                                                      selected = NULL,
                                                       width = "200px"))
                )
         ),
@@ -66,13 +66,18 @@ ui <- fluidPage(
     
     fluidRow(
         column(12,
+               h5(textOutput("result"), align = "center"))
+        ),
+    
+    fluidRow(
+        column(12,
                tagList("Fragen?", url_easyvote), align = "center")
-    )
+        )
     )
 
 
 # define server logic -----------------------------------------------------
-server <- function(input, output, session) {
+server <- function(input, output) {
     
     output$map <- renderPlot({
         
@@ -81,10 +86,14 @@ server <- function(input, output, session) {
             geom_sf(fill = "#FF0000", alpha = 0.8) +
             gghighlight(NAME_1_deutsch == input$selected_canton) +
             coord_sf(datum = NA) +
-            ggtitle("du solltest abstimmen") +
-            theme_void() +
-            theme(plot.title = element_text(hjust = 0.5, size = 20, face = "bold",
-                                            family = "Helvetica", colour = "#FF0000"))
+            theme_void()
+    })
+    
+    output$result <- renderText({
+        
+        if_else(input$selected_canton == "",
+                "",
+                "du solltest abstimmen")
     })
     }
 
